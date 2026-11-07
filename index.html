@@ -665,7 +665,7 @@ var DEFAULT_SETTINGS = { shopName: "Delicious Hand", address: "", phone: "829816
 var ORDER_STEPS = ["new", "preparing", "ready", "done"];
 
 var $ = function (id) { return document.getElementById(id); };
-function rupee(n) { return "?" + Math.round(Number(n) || 0).toLocaleString("en-IN"); }
+function rupee(n) { return "₹" + Math.round(Number(n) || 0).toLocaleString("en-IN"); }
 function digitsOf(s) { return String(s || "").replace(/\D/g, ""); }
 function phoneDigits(s) { var d = digitsOf(s); if (d.length === 12 && d.indexOf("91") === 0) d = d.slice(2); return d; }
 function telHref(s) { var d = digitsOf(s); if (d.length === 10) d = "91" + d; return "tel:+" + d; }
